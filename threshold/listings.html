@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threshold Plaza - Threshold Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="listings.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Threshold" class="logo-img"> THRESHOLD NG.
+            </div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <div class="property-details-container">
+        <div class="property-gallery">
+            <div class="main-image">
+                <img src="luxury-villa.jpg" alt="Luxury Villa Exterior">
+            </div>
+            <div class="thumbnail-gallery">
+                <img src="villa-interior1.jpg" alt="Interior View 1">
+                <img src="villa-interior2.jpg" alt="Interior View 2">
+                <img src="villa-exterior.jpg" alt="Exterior View">
+                <img src="villa-garden.jpg" alt="Garden Area">
+            </div>
+        </div>
+
+        <div class="property-info">
+            <h1>Threshold Plaza</h1>
+            <div class="property-price-location">
+                <span class="price">₦850,000,000</span>
+                <span class="location"><i class="fas fa-map-marker-alt"></i> Gwaarinpa, FCT Abuja</span>
+            </div>
+
+            <div class="property-features">
+                <h2>Property Features</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-bed"></i>
+                        <span>6 Bedrooms</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-bath"></i>
+                        <span>7 Bathrooms</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span>1,200 sqm</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Private Pool</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-car"></i>
+                        <span>4-Car Garage</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-home"></i>
+                        <span>Modern Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-description">
+                <h2>Property Description</h2>
+                <p>
+                    Threshold Plaza, located at Plot C47 along 522 Road near Fidelity Bank in Gwarinpa Estate, 
+                    Abuja, is a fully completed commercial property ready for immediate use. It offers 
+                    47 versatile shop spaces ranging from 6 to 35 square meters, catering to businesses of all sizes. 
+                    The plaza features modern amenities, including reliable water supply, ample parking, and 24/7 security 
+                    with CCTV surveillance for a safe environment. Its prime location ensures high visibility and easy accessibility, 
+                    making it an ideal choice for entrepreneurs and established businesses alike. With its blend of 
+                    functionality, security, and convenience, Threshold Plaza provides a perfect platform for 
+                    growth and success in a bustling commercial hub.
+                </p>
+            </div>
+
+            <div class="amenities">
+                <h2>Amenities</h2>
+                <ul>
+                    <li><i class="fas fa-check"></i> 24/7 Security</li>
+                    <li><i class="fas fa-check"></i> Tarred Roads</li>
+                    <li><i class="fas fa-check"></i> Abundant Water Supply</li>
+                    <li><i class="fas fa-check"></i> Ample Parking Space</li>
+                    <li><i class="fas fa-check"></i> 36sqm. 47 Shops</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Schedule a Property Tour</h2>
+            <form id="tour-request-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="preferred-date">Preferred Date</label>
+                    <input type="date" id="preferred-date" name="preferred-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Notes</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="primary-btn">Request Tour</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="property-map">
+        <h2>Property Location</h2>
+        <div id="map-container"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>Threshold</h3>
+                <p>Your trusted partner in LPG delivery, real estate, and weighbridge services.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="lpg.html">LPG Delivery</a></li>
+                    <li><a href="realestate.html">Real Estate</a></li>
+                    <li><a href="#weighbridge.html">Weighbridge</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +234 123 456 7890</p>
+                <p><i class="fas fa-envelope"></i> info@threshold.ng</p>
+                <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Threshold. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="listings.js"></script>
+</body>
+</html>

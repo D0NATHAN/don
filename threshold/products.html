@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Threshold</title>
+    <link rel="stylesheet" href="products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Threshold" class="logo-img"> THRESHOLD NG.
+            </div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <main>
+        <div class="video-container">
+            <video class="background-video" autoplay muted loop playsinline>
+                <source src="/path/to/your/video.mp4" type="video/mp4">
+                <!-- Optional: Add multiple sources for better browser compatibility -->
+                <source src="/path/to/your/video.webm" type="video/webm">
+            </video>
+            <div class="video-overlay"></div>
+            <section class="products-header">
+                <div class="container">
+                    <h1>PRODUCTS</h1>
+                    <h2>Our Innovations</h2>
+                    <h2>Industry Focused Products!</h2>
+                </div>
+            </section>
+        </div>        
+
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search products, locations, or services...">
+                    <button id="search-button" class="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div id="suggestions" class="suggestions-container"></div>
+                </div>
+                    <div class="search-filters">
+                        <select id="category">
+                            <option value="">All Categories</option>
+                            <option value="real-estate">Real Estate</option>
+                            <option value="lpg">LPG</option>
+                            <option value="weighbridge">Weighbridge</option>
+                        </select>
+                        <select id="location">
+                            <option value="">All Locations</option>
+                            <option value="abuja">Abuja</option>
+                            <option value="lagos">Lagos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-grid">
+            <div class="container">
+                <!-- Real Estate Card -->
+                <section id = "section1">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="realestate.jpg" alt="Real Estate">
+                    </div>
+                    <div class="product-content">
+                        <h3>Threshold Real Estate</h3>
+                        <p>
+                            Our real estate company is dedicated to providing high-quality residential and commercial properties 
+                            that match the needs of our clients. We are committed to delivering an exceptional experience to every 
+                            client, whether looking to buy, sell, or invest in real estate.
+                        </p>
+                        <div class="product-features">
+                            <span><i class="fas fa-home"></i> Properties</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Multiple Locations</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="projects.html" class="primary-btn">Learn More</a>
+                            <div class="social-share">
+                                <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-dropdown">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- LPG Card -->
+                 <section id = "section2">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="lpg.jpg" alt="LPG Services">
+                    </div>
+                    <div class="product-content">
+                        <h3>Threshold Gas</h3>
+                        <p>
+                            Our Gas LPG company is committed to providing reliable and affordable energy solutions to homes and businesses. 
+                            We specialize in delivering liquefied petroleum gas (LPG) to customers across different industries, including 
+                            healthcare, hospitality, manufacturing, and agriculture.
+                        </p>
+                        <div class="product-features">
+                            <span><i class="fas fa-gas-pump"></i> Gas Services</span>
+                            <span><i class="fas fa-truck"></i> Delivery Available</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="lpg.html" class="primary-btn">Learn More</a>
+                            <div class="social-share">
+                                <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-dropdown">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <!-- Weighbridge Card -->
+                 <section id = "section3">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="weighbridge.jpg" alt="Weighbridge Services">
+                    </div>
+                    <div class="product-content">
+                        <h3>Threshold Weight Bridge</h3>
+                        <p>
+                            We provide dependable weight bridge solutions to diverse industries, enduring harsh weather. 
+                            Our team ensures seamless installation and operational support, aiming to enhance efficiency,
+                            minimize downtime, and decrease weighing inaccuracies.
+                        </p>
+                        <div class="product-features">
+                            <span><i class="fas fa-balance-scale"></i> Weighing Solutions</span>
+                            <span><i class="fas fa-clock"></i> 24/7 Service</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="weighbridge.html" class="primary-btn">Learn More</a>
+                            <div class="social-share">
+                                <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                                <div class="share-dropdown">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2>Our Locations</h2>
+                <div id="map" class="google-map"></div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Need Help?</h2>
+                    <p>Click the Button to Get in Touch</p>
+                    <button class="cta-btn">Get in Touch</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+           
+                <div class="footer-section">
+                    <h3>Threshold</h3>
+                    <p>Your trusted partner in LPG delivery, real estate, and weighbridge services.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="lpg.html">LPG Delivery</a></li>
+                        <li><a href="projects.html">Real Estate</a></li>
+                        <li><a href="weighbridge.html">Weighbridge</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +234 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@threshold.ng</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Threshold. All rights reserved.</p>
+            </div>
+    </footer>
+    <script src="products.js"></script>
+</body>
+</html>

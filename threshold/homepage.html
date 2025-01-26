@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threshold NG.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Threshold" class="logo-img"> THRESHOLD NG.
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times close-menu" onclick="closeMenu()"></i>
+                <ul>
+                    <li><a href="homepage.html" class="active">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars menu-icon" onclick="showMenu()"></i>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1>Threshold NG<br><span>Real Estate Solutions</span></h1>
+                    <p>Discover the perfect property with our real estate services</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Professional Weighbridge<br><span>Services</span></h1>
+                    <p>Accurate weighing solutions for your business needs</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>LPG<br><span>Gas</span></h1>
+                    <p>Providing reliable and affordable energy solutions.</p>
+                </div>
+            </div>
+
+            <div class="slide-arrows">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+            <div class="slide-nav">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p class="section-desc">Explore our comprehensive service offerings</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>LPG Services</h3>
+                    <p>Reliable gas delivery for homes and businesses with 24/7 support and competitive pricing.</p>
+                    <a href="products.html#section2" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Real Estate</h3>
+                    <p>Find your perfect property with our extensive portfolio and expert guidance.</p>
+                    <a href="products.html#section1" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Weight Bridge</h3>
+                    <p>Accurate weighing solutions with certified equipment and professional staff.</p>
+                    <a href="products.html#section3" class="learn-more">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="874">874</div>
+                    <p>LPG Deliveries</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="256">256</div>
+                    <p>Weighbridge Services</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="354">354</div>
+                    <p>Real Estate Deals</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="864">864</div>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+           
+                <div class="footer-section">
+                    <h3>Threshold</h3>
+                    <p>Your trusted partner in LPG delivery, real estate, and weighbridge services.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="lpg.html">LPG Delivery</a></li>
+                        <li><a href="projects.html">Real Estate</a></li>
+                        <li><a href="weighbridge.html">Weighbridge</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +234 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@threshold.ng</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Threshold. All rights reserved.</p>
+            </div>
+    </footer>
+    <script src="homepage.js"></script>
+</body>
+</html>

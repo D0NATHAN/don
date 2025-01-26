@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threshold NG.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="weighbridge.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Threshold" class="logo-img"> THRESHOLD NG.
+            </div>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container hero-content">
+            <h1>Weighbridge Services</h1>
+            <p>Accurate, Reliable, and Efficient Weighing Solutions for Your Business</p>
+        </div>
+    </section>
+
+    <section class="service-description container">
+        <h2>Our Weighbridge Services</h2>
+        <p>Threshold NG offers comprehensive weighbridge services designed to meet the diverse needs of businesses across various industries.</p>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fas fa-weight"></i>
+                <h3>Precise Measurements</h3>
+                <p>High-accuracy weighing for trucks, containers, and bulk materials.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-clipboard-check"></i>
+                <h3>Certification</h3>
+                <p>Official weight certificates for legal and commercial purposes.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Data Management</h3>
+                <p>Digital record-keeping and comprehensive reporting.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="industries-section container">
+        <h2>Industries We Serve</h2>
+        <div class="industries-grid">
+            <div class="industry-card">
+                <i class="fas fa-truck"></i>
+                <h3>Logistics</h3>
+                <p>Comprehensive weighing solutions for transportation and freight companies.</p>
+            </div>
+            <div class="industry-card">
+                <i class="fas fa-industry"></i>
+                <h3>Manufacturing</h3>
+                <p>Precise weight tracking for raw materials and finished products.</p>
+            </div>
+            <div class="industry-card">
+                <i class="fas fa-tractor"></i>
+                <h3>Agriculture</h3>
+                <p>Accurate weighing for agricultural produce and equipment.</p>
+            </div>
+            <div class="industry-card">
+                <i class="fas fa-recycle"></i>
+                <h3>Waste Management</h3>
+                <p>Precise weight measurements for recycling and disposal operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="equipment-section container">
+        <h2>Advanced Weighbridge Technology</h2>
+        <div class="equipment-grid">
+            <div class="equipment-card">
+                <div class="equipment-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Digital Weighing Systems</h3>
+                <ul>
+                    <li>High-precision load cells</li>
+                    <li>Real-time digital displays</li>
+                    <li>Advanced signal processing</li>
+                </ul>
+            </div>
+            <div class="equipment-card">
+                <div class="equipment-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Data Management</h3>
+                <ul>
+                    <li>Cloud-based record keeping</li>
+                    <li>Automated reporting</li>
+                    <li>Secure data storage</li>
+                </ul>
+            </div>
+            <div class="equipment-card">
+                <div class="equipment-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Compliance & Accuracy</h3>
+                <ul>
+                    <li>Certified calibration</li>
+                    <li>ISO 9001 standards</li>
+                    <li>Regular maintenance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section container">
+        <h2>Service Packages</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Basic Package</h3>
+                <div class="price-tag">₦5,000 <span>/session</span></div>
+                <ul class="package-features">
+                    <li>Single vehicle weighing</li>
+                    <li>Basic weight certificate</li>
+                    <li>Standard processing time</li>
+                </ul>
+                <button class="select-package">Select Package</button>
+            </div>
+            <div class="pricing-card featured">
+                <div class="recommended-badge">Most Popular</div>
+                <h3>Standard Package</h3>
+                <div class="price-tag">₦15,000 <span>/month</span></div>
+                <ul class="package-features">
+                    <li>Unlimited monthly weighings</li>
+                    <li>Detailed monthly reports</li>
+                    <li>Priority processing</li>
+                    <li>Digital certificate archive</li>
+                </ul>
+                <button class="select-package">Select Package</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise Package</h3>
+                <div class="price-tag">Custom</div>
+                <ul class="package-features">
+                    <li>Tailored solutions</li>
+                    <li>24/7 dedicated support</li>
+                    <li>Custom reporting</li>
+                    <li>Dedicated account manager</li>
+                </ul>
+                <button class="select-package">Contact Sales</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="appointment-section container">
+        <h2>Schedule Weighbridge Service</h2>
+        <form id="weighbridge-booking" class="booking-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" name="company-name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service-type">Service Type</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="">Select Service</option>
+                        <option value="single-weighing">Single Vehicle Weighing</option>
+                        <option value="monthly-package">Monthly Package</option>
+                        <option value="custom-service">Custom Service</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="preferred-date">Preferred Date</label>
+                    <input type="date" id="preferred-date" name="preferred-date" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="additional-details">Additional Details</label>
+                    <textarea id="additional-details" name="additional-details" rows="4"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="submit-booking">Book Appointment</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+           
+                <div class="footer-section">
+                    <h3>Threshold</h3>
+                    <p>Your trusted partner in LPG delivery, real estate, and weighbridge services.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-images"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-images"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-images"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-images"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="lpg.html">LPG Delivery</a></li>
+                        <li><a href="projects.html">Real Estate</a></li>
+                        <li><a href="weighbridge.html">Weighbridge</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +234 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@threshold.ng</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Threshold. All rights reserved.</p>
+            </div>
+    </footer>
+    <script src="contact.js"></script>
+</body>
+</html>
