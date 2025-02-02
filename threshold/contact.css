@@ -226,10 +226,18 @@ nav {
     background: var(--primary-dark);
 }
 
-.map-section {
+.map {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--white);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+#map-section {
     height: 400px;
-    background: var(--gray-light);
-    margin-top: 4rem;
+    background: var(--background-color);
 }
 
 .success-message,
@@ -279,6 +287,26 @@ nav {
 .social-icon:hover {
     transform: scale(1.1);
     background: var(--primary-dark);
+}
+
+:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 8px;
+    z-index: 1001;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 @keyframes fadeInDown {
@@ -338,6 +366,187 @@ nav {
         margin: 2rem 0;
     }
 }
+
+@media (max-width: 768px) {
+    .nav-links a,
+    .primary-btn,
+    .social-icon,
+    .form-group input,
+    .form-group textarea,
+    .submit-btn {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+
+    .form-group {
+        margin-bottom: 24px;
+    }
+    
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Adjust hero text for mobile */
+    .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+/* Improved contrast ratios for accessibility */
+.text-light {
+    color: #595959; /* Darker than original for better contrast */
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Enhanced form accessibility */
+.form-group label {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.2);
+}
+
+/* ARIA improvements for interactive elements */
+[role="button"],
+[role="tab"],
+[role="link"] {
+    cursor: pointer;
+}
+
+/* Improved tap targets spacing for mobile */
+@media (max-width: 480px) {
+    .nav-links ul {
+        gap: 1.5rem;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+    
+    /* Stack grid items on mobile */
+    .contact-container,
+    .services-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        gap: 2rem;
+    }
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+    .primary-btn,
+    .submit-btn,
+    .social-icon {
+        border: 2px solid currentColor;
+    }
+}
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+    /* Prevent zoom on input focus */
+    input, 
+    select, 
+    textarea {
+        font-size: 16px;
+    }
+
+    /* Fix sticky hover on iOS */
+    @media (hover: none) {
+        .nav-links a:hover::after,
+        .service-card:hover,
+        .info-card:hover {
+            transform: none;
+        }
+    }
+}
+
+/* Error states for form fields */
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #dc3545;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 2px solid var(--primary-color);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Better keyboard navigation indicators */
+.nav-links a:focus-visible,
+.social-icon:focus-visible,
+.primary-btn:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
 .nav-links a:hover {
     color: var(--primary-color);
 }

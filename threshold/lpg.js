@@ -9,14 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
         'Weight Measurement'
     ];
 
-    // Location-based Price Checker
     const locationInput = document.getElementById('location-input');
     const priceResults = document.getElementById('price-results');
 
     locationInput.addEventListener('input', function() {
         const location = this.value.trim();
         if (location) {
-            // Simulated location-based pricing logic
             const baseLocations = {
                 'Abuja': { priceMultiplier: 1.0 },
                 'Lagos': { priceMultiplier: 1.1 },
@@ -36,16 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Order Now Functionality
     const orderNowBtn = document.getElementById('order-now-btn');
     if (orderNowBtn) {
         orderNowBtn.addEventListener('click', function() {
-            // Implement order process or redirect to checkout
             window.location.href = '/checkout.html';
         });
     }
 
-    // Initialize page components
     populateProducts();
 });
 
@@ -58,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalPriceElement = document.getElementById('total-price');
     const orderNowBtn = document.getElementById('orderNow');
 
-    // Sample location pricing data (would typically come from a backend)
     const locationPrices = {
         'Lagos': { '5kg': 3800, '12.5kg': 4800, '50kg': 6200 },
         'Abuja': { '5kg': 3600, '12.5kg': 4600, '50kg': 6000 },
@@ -118,8 +112,16 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // In a real application, this would redirect to a checkout page
-        // or open a modal with checkout details
         alert(`Preparing checkout for ${quantity} x ${size} cylinders`);
     });
 });
+
+function showMenu() {
+    document.getElementById("navLinks").classList.add("active");
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    document.getElementById("navLinks").classList.remove("active");
+    document.body.style.overflow = '';
+}

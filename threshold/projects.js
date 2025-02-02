@@ -61,3 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     });
 });
+
+function showMenu() {
+    document.getElementById("navLinks").classList.add("active");
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    document.getElementById("navLinks").classList.remove("active");
+    document.body.style.overflow = '';
+}

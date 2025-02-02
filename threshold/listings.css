@@ -5,8 +5,8 @@
     --text-light: #666;
     --background-color: #f4f4f4;
     --white: #ffffff;
-    --gray-light: #f8f9fa; /* Added missing variable */
-    --transition: all 0.3s ease; /* Added missing transition */
+    --gray-light: #f8f9fa;
+    --transition: all 0.3s ease;
 }
 
 * {
@@ -252,7 +252,7 @@ nav {
     background: #600000;
 }
 
-.property-map {
+.map {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
@@ -261,7 +261,7 @@ nav {
     border-radius: 10px;
 }
 
-#map-container {
+#map-section {
     height: 400px;
     background: var(--background-color);
 }
