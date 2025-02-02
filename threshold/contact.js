@@ -85,108 +85,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
                     dropdown.classList.toggle('active');
                 });
             });
-
-            if (typeof google !== 'undefined') {
-                initMap();
-            } else {
-                console.error('Google Maps API not loaded');
-            }
-        
-            function initMap() {
-                const mapStyles = [
-                    { featureType: 'poi', elementType: 'labels', stylers: [{ visibility: 'off' }] },
-                    { featureType: 'transit', elementType: 'labels', stylers: [{ visibility: 'off' }] }
-                ];
-        
-                const map = new google.maps.Map(document.getElementById('map'), {
-                    center: { lat: 9.0765, lng: 7.3986 },
-                    zoom: 12,
-                    styles: mapStyles,
-                    mapTypeControl: true,
-                    streetViewControl: true,
-                    fullscreenControl: true
-                });
-        
-                const icons = {
-                    'real-estate': { url: '/images/markers/real-estate.png', scaledSize: new google.maps.Size(32, 32) },
-                    'lpg': { url: '/images/markers/lpg.png', scaledSize: new google.maps.Size(32, 32) },
-                    'weighbridge': { url: '/images/markers/weighbridge.png', scaledSize: new google.maps.Size(32, 32) }
-                };
-        
-                const locations = [
-                    { title: 'Real Estate Office', position: { lat: 9.0765, lng: 7.3986 }, type: 'real-estate', description: 'Main real estate office location' },
-                    { title: 'LPG Station', position: { lat: 9.0805, lng: 7.4204 }, type: 'lpg', description: 'LPG distribution center' },
-                    { title: 'Weighbridge Center', position: { lat: 9.0574, lng: 7.4898 }, type: 'weighbridge', description: 'Vehicle weighing station' }
-                ];
-        
-                const infoWindow = new google.maps.InfoWindow();
-        
-                const markers = locations.map(location => {
-                    const marker = new google.maps.Marker({
-                        position: location.position,
-                        map: map,
-                        title: location.title,
-                        icon: icons[location.type],
-                        animation: google.maps.Animation.DROP
-                    });
-        
-                    marker.addListener('click', () => {
-                        infoWindow.setContent(
-                            `<div class="info-window">
-                                <h3>${location.title}</h3>
-                                <p>${location.description}</p>
-                                <button onclick="getDirections(${location.position.lat}, ${location.position.lng})">Get Directions</button>
-                            </div>`
-                        );
-                        infoWindow.open(map, marker);
-                    });
-                    return marker;
-                });
-        
-                new MarkerClusterer(map, markers, {
-                    imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-                });
-        
-                addCustomControls(map);
-            }
-        
-            function getDirections(lat, lng) {
-                window.open(`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`);
-            }
-        
-            function addCustomControls(map) {
-                const customControlDiv = document.createElement('div');
-                customControlDiv.className = 'custom-map-control';
-        
-                ['real-estate', 'lpg', 'weighbridge'].forEach(type => {
-                    const button = document.createElement('button');
-                    button.textContent = `Show ${type.replace('-', ' ')}`;
-                    button.addEventListener('click', () => filterMarkers(type));
-                    customControlDiv.appendChild(button);
-                });
-        
-                const resetButton = document.createElement('button');
-                resetButton.textContent = 'Reset View';
-                resetButton.addEventListener('click', () => {
-                    map.setCenter({ lat: 9.0765, lng: 7.3986 });
-                    map.setZoom(12);
-                });
-                customControlDiv.appendChild(resetButton);
-        
-                map.controls[google.maps.ControlPosition.TOP_RIGHT].push(customControlDiv);
-            }
-        
-            function trackPageView() {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'page_view', {
-                        page_title: document.title,
-                        page_location: window.location.href,
-                        page_path: window.location.pathname
-                    });
-                }
-            }
-        
-            trackPageView();
         
             const video = document.querySelector('.background-video');
         
@@ -213,3 +111,12 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
             }
         });
         
+        function showMenu() {
+            document.getElementById("navLinks").classList.add("active");
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeMenu() {
+            document.getElementById("navLinks").classList.remove("active");
+            document.body.style.overflow = '';
+        }

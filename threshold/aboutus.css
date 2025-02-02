@@ -230,6 +230,99 @@ nav {
     color: var(--text-light);
 }
 
+@media (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (hover: none) {
+
+    .nav-links a,
+    .primary-btn,
+    .learn-more {
+        padding: 12px 20px;
+        min-height: 44px;
+    }
+
+    .service-card,
+    .team-member,
+    .mission-card {
+        transition: transform 0.2s ease;
+    }
+
+    .service-card:active,
+    .team-member:active,
+    .mission-card:active {
+        transform: scale(0.98);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mission-vision-container {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@supports (padding: max(0px)) {
+    .nav-container,
+    .container,
+    .footer-content {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .hero-section,
+    .services,
+    .mission-section,
+    .team-section {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 768px) {
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -411,7 +504,6 @@ nav {
     }
 }
 
-
 .company-history {
     padding: 4rem 0;
     text-align: center;
@@ -439,7 +531,6 @@ nav {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Team Section */
 .team-section {
     background-color: var(--background-color);
     padding: 4rem 0;
@@ -593,9 +684,229 @@ nav {
 }
 
 .mission-card .section-icon {
-    color: #610000; /* A green shade for mission */
+    color: #610000;
 }
 
 .vision-card .section-icon {
-    color: #640000; /* A blue shade for vision */
+    color: #640000;
+}
+
+/* Mobile First Media Queries */
+
+/* Base styles for mobile (up to 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .services-grid,
+    .mission-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card,
+    .mission-card {
+        padding: 1.5rem;
+    }
+
+    .footer-content {
+        padding: 0 12px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* Adjust touch targets for mobile */
+    .nav-links a,
+    .primary-btn,
+    .learn-more {
+        padding: 12px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+/* Tablet styles (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero {
+        padding-top: 110px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .services-grid,
+    .mission-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .core-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Larger tablets and small laptops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .services-grid,
+    .mission-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Common mobile and tablet navigation styles */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0.5rem 16px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        max-width: 400px;
+        background: var(--white);
+        padding: 4rem 1.5rem;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.8rem 0;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 1.8rem;
+        z-index: 1001;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.8rem;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .service-card:active,
+    .mission-card:active,
+    .team-member:active {
+        transform: scale(0.98);
+    }
+
+    /* Improve scrolling on iOS */
+    .nav-links {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .hero-section,
+    .services,
+    .mission-section,
+    .team-section {
+        background-attachment: scroll;
+    }
+
+    /* Fix for iOS viewport height issue */
+    .hero {
+        height: -webkit-fill-available;
+    }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+    .nav-container,
+    .container,
+    .footer-content {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+}
+
+/* Fix for mobile form elements */
+@media (max-width: 768px) {
+    input,
+    select,
+    textarea {
+        font-size: 16px; /* Prevents iOS zoom on focus */
+        padding: 12px;
+    }
 }
