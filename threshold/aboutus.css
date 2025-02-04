@@ -324,29 +324,6 @@ nav {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 100%;
-        background: var(--white);
-        padding: 2rem;
-        transition: right 0.3s;
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .nav-links ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .menu-icon, .close-menu {
-        display: block;
-    }
 
     .slide-content h1 {
         font-size: 2rem;
@@ -691,127 +668,20 @@ nav {
     color: #640000;
 }
 
-/* Mobile First Media Queries */
-
-/* Base styles for mobile (up to 480px) */
-@media (max-width: 480px) {
-    .container {
-        padding: 0 12px;
-    }
-
-    .hero {
-        padding-top: 100px;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-        line-height: 1.3;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    .services-grid,
-    .mission-grid,
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .service-card,
-    .mission-card {
-        padding: 1.5rem;
-    }
-
-    .footer-content {
-        padding: 0 12px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    /* Adjust touch targets for mobile */
-    .nav-links a,
-    .primary-btn,
-    .learn-more {
-        padding: 12px;
-        min-height: 44px;
-        display: inline-flex;
-        align-items: center;
-    }
-}
-
-/* Tablet styles (481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .container {
-        padding: 0 16px;
-    }
-
-    .hero {
-        padding-top: 110px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .services-grid,
-    .mission-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .core-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Larger tablets and small laptops (769px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .container {
-        padding: 0 24px;
-    }
-
-    .hero {
-        padding-top: 120px;
-    }
-
-    .services-grid,
-    .mission-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .footer-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-/* Common mobile and tablet navigation styles */
 @media (max-width: 768px) {
-    .nav-container {
-        padding: 0.5rem 16px;
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+    .close-menu {
+        display: none;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        cursor: pointer;
+        font-size: 1.5rem;
     }
 
     .nav-links {
@@ -819,94 +689,172 @@ nav {
         top: 0;
         right: -100%;
         height: 100vh;
-        width: 80%;
-        max-width: 400px;
+        width: 100%;
         background: var(--white);
-        padding: 4rem 1.5rem;
-        transition: right 0.3s ease;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
+        padding: 4rem 2rem;
+        transition: 0.3s ease;
     }
 
     .nav-links.active {
         right: 0;
     }
 
+    .nav-links.active .close-menu {
+        display: block;
+    }
+
     .nav-links ul {
         flex-direction: column;
         gap: 1.5rem;
+        padding-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
     }
 
-    .nav-links li {
-        width: 100%;
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .nav-links a {
-        display: block;
-        padding: 0.8rem 0;
-        width: 100%;
+    .slide-content h1 {
+        font-size: 2.8rem;
     }
 
-    .menu-icon {
-        display: block;
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .nav-container {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        height: 32px;
+    }
+
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section {
+        min-width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slide-content h1 {
         font-size: 1.8rem;
+    }
+
+    .primary-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .services {
+        padding: 3rem 0;
+    }
+
+    .service-card img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 80%;
+        background: var(--white);
+        padding: 4rem 2rem;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
         z-index: 1001;
     }
 
     .close-menu {
         position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 1.8rem;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        display: block;
+    }
+
+    .slide-arrows button {
+        padding: 0.8rem;
+        font-size: 1.5rem;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
     }
 }
 
-/* Touch device optimizations */
-@media (hover: none) {
-    .service-card:active,
-    .mission-card:active,
-    .team-member:active {
-        transform: scale(0.98);
-    }
-
-    /* Improve scrolling on iOS */
-    .nav-links {
-        -webkit-overflow-scrolling: touch;
-    }
-}
-
-/* iOS-specific fixes */
 @supports (-webkit-touch-callout: none) {
-    .hero-section,
-    .services,
-    .mission-section,
-    .team-section {
-        background-attachment: scroll;
-    }
-
-    /* Fix for iOS viewport height issue */
     .hero {
         height: -webkit-fill-available;
     }
-}
-
-/* Safe area insets for notched devices */
-@supports (padding: max(0px)) {
-    .nav-container,
-    .container,
-    .footer-content {
-        padding-left: max(20px, env(safe-area-inset-left));
-        padding-right: max(20px, env(safe-area-inset-right));
+    
+    .slideshow-container {
+        height: calc(-webkit-fill-available - 80px);
     }
 }
 
-/* Fix for mobile form elements */
-@media (max-width: 768px) {
-    input,
-    select,
-    textarea {
-        font-size: 16px; /* Prevents iOS zoom on focus */
+@media (hover: none) and (pointer: coarse) {
+    .nav-links a,
+    .primary-btn,
+    .learn-more,
+    .social-icon {
         padding: 12px;
+        margin: 5px 0;
     }
 }

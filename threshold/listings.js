@@ -42,3 +42,13 @@ Message: ${data.message}`);
 
     initMap();
 });
+
+function showMenu() {
+    document.getElementById("navLinks").classList.add("active");
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+    document.getElementById("navLinks").classList.remove("active");
+    document.body.style.overflow = '';
+}
