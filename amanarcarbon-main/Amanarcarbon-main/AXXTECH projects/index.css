@@ -16,7 +16,6 @@
     --font-secondary: 'Noto Sans JP', sans-serif;
 }
 
-/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +29,6 @@ body {
     min-height: 100vh;
 }
 
-/* Typography */
 h1, h2, h3, h4 {
     font-family: var(--font-secondary);
     font-weight: 700;
@@ -72,7 +70,6 @@ a:hover {
     color: var(--primary-dark);
 }
 
-/* Navbar Styles */
 .navbar {
     position: fixed;
     top: 20px;
@@ -186,7 +183,6 @@ a:hover {
     transform: rotate(90deg);
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/banner.jpeg') no-repeat center center/cover;
     min-height: 100vh;
@@ -291,14 +287,12 @@ a:hover {
     transform: translateY(-3px);
 }
 
-/* Main Content Styles */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 20px;
 }
 
-/* Section Headings */
 .section-heading {
     text-align: center;
     margin-bottom: 60px;
@@ -312,7 +306,6 @@ a:hover {
     border-radius: 2px;
 }
 
-/* About Us Section */
 .about-us {
     background: linear-gradient(135deg, var(--white), var(--gradient-start));
     padding: 80px 0;
@@ -423,7 +416,6 @@ a:hover {
     display: block;
 }
 
-/* Projects Section */
 .projects {
     background: linear-gradient(135deg, var(--gradient-middle), var(--gradient-end));
     padding: 80px 0;
@@ -502,7 +494,6 @@ a:hover {
     gap: 5px;
 }
 
-/* Contact Section */
 .contact {
     background: linear-gradient(135deg, var(--gradient-start), var(--white));
     padding: 80px 0;
@@ -580,7 +571,6 @@ a:hover {
     outline: none;
 }
 
-/* Footer */
 .footer {
     background: linear-gradient(135deg, var(--secondary-color), var(--primary-dark));
     color: var(--white);
@@ -673,7 +663,6 @@ a:hover {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* Buttons */
 .primary-btn,
 .secondary-btn {
     padding: 15px 30px;
@@ -712,7 +701,6 @@ a:hover {
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         top: 10px;
