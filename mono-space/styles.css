@@ -1,0 +1,133 @@
+body {
+    background-color: black;
+    color: #FFFFFF;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    align-items: center; /* Center everything horizontally */
+    justify-content: center; /* Center everything vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+.ascii-art {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00FF00;
+    text-align: center;
+    white-space: pre;
+}
+
+
+.container {
+    margin: 2rem;
+    max-width: 800px;
+}
+
+.header {
+    border: 1px solid #FFFFFF;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin: 0.5rem 0;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+    border: 1px solid #FFFFFF;
+    padding: 0.5rem;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+ul li a {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-top: 2rem;
+    border: 1px solid #FFFFFF;
+    padding: 1rem;
+}
+
+div {
+
+body {
+    background-color: #000000;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: left;
+    height: 10vh;
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+.section {
+    padding: 10px 20px;
+    border: 1px solid #00FF00;
+    background-color: #111111;
+    text-align: center;
+    min-width: 100px;
+}
+
+}
+
+a {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.editable-list {
+    list-style-type: none; /* Removes default bullets */
+    padding: 0;
+}
+
+.editable-list li {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+
+@media (max-width: 768px) {
+    .info-box {
+        grid-template-columns: 1fr;
+    }
+}

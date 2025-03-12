@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c1c1c;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.title-box {
+    font-size: 1.5em;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #00FF00;
+    background-color: #111111;
+}
+
+#addRantButton {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    background-color: #00FF00;
+    color: #1c1c1c;
+    border: none;
+    cursor: pointer;
+}
+
+.rants-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.rant-box {
+    padding: 10px;
+    border: 1px solid #989898;
+    background-color: #111111;
+    color: #00FF00;
+    text-align: left;
+}
+
+.rant-date {
+    font-size: 0.9em;
+    color: #4c4c4c;
+    margin-bottom: 5px;
+}
+
+#backButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #00ff00; /* Green color */
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#backButton:hover {
+    text-decoration: underline;
+}
