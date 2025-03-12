@@ -1,0 +1,262 @@
+/* Root variables (if not already defined) */
+:root {
+    --primary-color: #0a8fdb; /* Example primary color */
+    --text-color: #333; /* Example text color */
+    --white: #fff;
+    --transition: all 0.3s ease; /* For smooth transitions */
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif; /* Or your preferred font */
+    margin: 0; /* Reset default body margin */
+    color: var(--text-color); /* Use root variable for text color */
+}
+
+a {
+    text-decoration: none; /* Remove underlines from links */
+    color: var(--primary-color); /* Example link color */
+    transition: var(--transition); /* Smooth transitions */
+}
+
+a:hover {
+    color: darken(var(--primary-color), 15%); /* Darker color on hover */
+}
+
+h1, h2, h3 {
+    font-weight: bold; /* Or your preferred heading weight */
+}
+
+h1 {
+    font-size: 2.5rem; /* Responsive font size */
+}
+
+h2 {
+    font-size: 2rem; /* Responsive font size */
+}
+
+p {
+    line-height: 1.6; /* Improved readability */
+    margin-bottom: 1rem; /* Consistent spacing */
+}
+
+img {
+    max-width: 100%; /* Prevent images from overflowing their containers */
+    height: auto;
+    display: block; /* Prevents image from creating extra space below */
+}
+
+/* Reusable button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color); /* Or your preferred background color */
+    color: var(--white);
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: darken(var(--primary-color), 15%); /* Darker on hover */
+    cursor: pointer;
+}
+
+/* Hero section styles */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center; /* Center text within hero */
+}
+
+.hero-content {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem; /* Responsive heading size */
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem; /* Responsive paragraph size */
+    margin-bottom: 2rem;
+}
+
+.hero .btn { /* Style the button within the hero */
+    font-size: 1.1rem;
+    padding: 15px 30px;
+}
+
+.climate-trade {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.climate-trade a {
+    color: var(--white);
+}
+
+/* Navbar styles */
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem; /* Responsive logo size */
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+/* Responsive design using media queries */
+@media (max-width: 1200px) {
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+    
+    .hero-content h4 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content {
+        padding: 30px 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-content h4 {
+        font-size: 1.2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social {
+        bottom: 20px;
+    }
+
+    .social i {
+        height: 35px;
+        width: 35px;
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 60px 20px;
+    }
+
+    .about-content {
+        padding: 0 20px;
+    }
+
+    .about-content h2 {
+        font-size: 2em;
+    }
+
+    .about-content p {
+        font-size: 1em;
+    }
+
+    .about-content .quote {
+        font-size: 1.1em;
+    }
+
+    .about-video-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 1.8em;
+    }
+
+    .hero-content h4 {
+        font-size: 1.1em;
+    }
+
+    .hero-content p {
+        font-size: 0.9em;
+    }
+
+    .social i {
+        height: 30px;
+        width: 30px;
+        font-size: 0.9rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.8em;
+    }
+
+    .about-content p {
+        font-size: 0.9em;
+    }
+
+    .about-content .quote {
+        font-size: 1em;
+    }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.about-content {
+    animation: fadeIn 1s ease-out;
+}
+
+/* ... any other section styles, footer styles, etc. */
