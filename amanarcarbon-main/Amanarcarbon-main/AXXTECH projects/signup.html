@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - AmanarCarbon</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="signup-page">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" class="logo-text">AmanarCarbon</a>
+            <span class="logo-tagline">Carbon Neutral Future</span>
+        </div>
+    </nav>
+
+    <main class="signup-container">
+        <div class="signup-card">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+                <div class="progress-step active" data-step="1">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <i class="fas fa-home"></i>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <i class="fas fa-leaf"></i>
+                </div>
+            </div>
+
+            <form id="signupForm" class="multi-step-form">
+                <div class="form-step active" data-step="1">
+                    <h2>Create Your Account</h2>
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+
+                <div class="form-step" data-step="2">
+                    <h2>Household Information</h2>
+                    <div class="form-group">
+                        <select id="householdSize" required>
+                            <option value="">Select household size</option>
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3-4 people</option>
+                            <option value="5">5+ people</option>
+                        </select>
+                        <label for="householdSize">Household Size</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="energySource" required>
+                            <option value="">Select primary energy source</option>
+                            <option value="grid">Grid Electricity</option>
+                            <option value="solar">Solar Power</option>
+                            <option value="wind">Wind Power</option>
+                            <option value="mixed">Mixed Renewable</option>
+                        </select>
+                        <label for="energySource">Primary Energy Source</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="monthlyEnergy" required>
+                        <label for="monthlyEnergy">Average Monthly Energy Usage (kWh)</label>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="form-step" data-step="3">
+                    <h2>Transportation Habits</h2>
+                    <div class="form-group">
+                        <select id="primaryTransport" required>
+                            <option value="">Select primary mode</option>
+                            <option value="car">Personal Car</option>
+                            <option value="public">Public Transport</option>
+                            <option value="bicycle">Bicycle</option>
+                            <option value="walk">Walking</option>
+                        </select>
+                        <label for="primaryTransport">Primary Transportation</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="weeklyMiles" required>
+                        <label for="weeklyMiles">Average Weekly Miles Traveled</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="carType" required>
+                            <option value="">Select vehicle type</option>
+                            <option value="electric">Electric Vehicle</option>
+                            <option value="hybrid">Hybrid</option>
+                            <option value="gasoline">Gasoline</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="none">No Vehicle</option>
+                        </select>
+                        <label for="carType">Vehicle Type</label>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="form-step" data-step="4">
+                    <h2>Offset Preferences</h2>
+                    <div class="form-group">
+                        <select id="offsetPreference" required>
+                            <option value="">Select preferred project type</option>
+                            <option value="reforestation">Reforestation</option>
+                            <option value="renewable">Renewable Energy</option>
+                            <option value="conservation">Conservation</option>
+                            <option value="mixed">Mixed Portfolio</option>
+                        </select>
+                        <label for="offsetPreference">Preferred Project Type</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="offsetFrequency" required>
+                            <option value="">Select offset frequency</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="quarterly">Quarterly</option>
+                            <option value="annually">Annually</option>
+                        </select>
+                        <label for="offsetFrequency">Offset Frequency</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="tokenRewards" checked>
+                            <label for="tokenRewards">Receive CRBN tokens as rewards</label>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i> Back</button>
+                        <button type="submit" class="submit-btn">Complete Sign Up <i class="fas fa-check"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html> 

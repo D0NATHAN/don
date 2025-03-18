@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentGradient = gradients[currentGradientIndex];
         const nextGradient = gradients[nextGradientIndex];
 
+
         const startColor = interpolateColors(currentGradient.start, nextGradient.start, transitionProgress);
         const endColor = interpolateColors(currentGradient.end, nextGradient.end, transitionProgress);
 
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const c1 = color1.match(/[\d.]+/g).map(Number);
         const c2 = color2.match(/[\d.]+/g).map(Number);
 
+    
         const r = Math.round(c1[0] + (c2[0] - c1[0]) * progress);
         const g = Math.round(c1[1] + (c2[1] - c1[1]) * progress);
         const b = Math.round(c1[2] + (c2[2] - c1[2]) * progress);
@@ -63,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return `rgba(${r}, ${g}, ${b}, ${a})`;
     }
 
+    
     function animateGradientTransition() {
         if (!isTransitioning) {
             isTransitioning = true;
@@ -70,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
             heroOverlay.classList.add('active');
         }
 
-        transitionProgress += 0.005;
+        transitionProgress += 0.005
 
         if (transitionProgress >= 1) {
             transitionProgress = 0;
@@ -85,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animateGradientTransition();
 
+
     function animateHeroContent() {
         setTimeout(() => {
             heroContent.classList.add('visible');
@@ -95,17 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animateBackground();
 
-    const gradients = [
-        "linear-gradient(to right, rgba(10, 46, 56, 0.6), rgba(26, 83, 92, 0.8))", 
-        "linear-gradient(to right, rgba(34, 177, 76, 0.6), rgba(78, 205, 196, 0.8))",
-        "linear-gradient(to right, rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.9))", 
-    ];
-
-    let index = 0;
-
     if (heroOverlay) {
+        let index = 0;
         function changeGradient() {
-            heroOverlay.style.background = gradients[index];
+            const gradient = gradients[index];
+            heroOverlay.style.background = `linear-gradient(to right, ${gradient.start}, ${gradient.end})`;
             index = (index + 1) % gradients.length;
         }
 

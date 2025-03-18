@@ -83,8 +83,8 @@ a:hover {
     align-items: center;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2),
@@ -221,6 +221,7 @@ a:hover {
 
 .hero-content {
     background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 60px;
@@ -307,9 +308,10 @@ a:hover {
 }
 
 .about-us {
-    background: linear-gradient(135deg, var(--white), var(--gradient-start));
-    padding: 80px 0;
+    background: linear-gradient(rgba(34, 34, 34, 0.85), rgba(51, 51, 51, 0.9)), url('images/carbonoffset.jpg') no-repeat center center/cover;
+    padding: 100px 0;
     position: relative;
+    color: var(--white);
 }
 
 .about-us::before {
@@ -319,7 +321,7 @@ a:hover {
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(to bottom right, var(--gradient-start), transparent);
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 0.9), transparent);
     pointer-events: none;
 }
 
@@ -327,6 +329,12 @@ a:hover {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    color: var(--white);
+}
+
+.about-content p {
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .features-grid {
@@ -338,66 +346,68 @@ a:hover {
 
 .feature {
     padding: 30px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     transition: var(--transition);
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .feature:hover {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.15);
     transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .feature i {
     font-size: 2.5em;
-    color: var(--primary-color);
+    color: var(--primary-light);
     margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .feature h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .feature p {
     font-size: 1em;
-    color: var(--text-light);
+    color: var(--white);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .about-content .quote {
     font-style: italic;
-    color: var(--primary-color);
+    color: var(--primary-light);
     font-size: 1.5em;
     margin: 40px 0;
     position: relative;
     padding: 30px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.about-content .quote::before,
-.about-content .quote::after {
-    content: '"';
-    font-size: 2em;
-    color: var(--primary-light);
-    position: absolute;
+.section-heading h2 {
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.about-content .quote::before {
-    left: 0;
-    top: -10px;
-}
-
-.about-content .quote::after {
-    right: 0;
-    bottom: -10px;
+.section-divider {
+    background: linear-gradient(to right, var(--primary-light), var(--primary-color));
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .about-video-container {
@@ -407,6 +417,7 @@ a:hover {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -440,35 +451,53 @@ a:hover {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    position: relative;
+    height: 400px; /* Adjust height as needed */
     overflow: hidden;
-    transition: var(--transition);
+    border-radius: 8px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project-card .project-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.project-card .project-content h3 {
+    color: #00ff9d; /* Bright green color for headings */
+    margin-bottom: 1rem;
+}
+
+.project-card .project-content p {
+    color: #7fffd4; /* Slightly softer green for paragraph text */
+}
+
+.project-card .project-link {
+    color: #00ff9d; /* Same bright green as headings for links */
+    text-decoration: none;
+}
+
+.project-card .project-link:hover {
+    color: #00cc7a; /* Slightly darker green on hover */
+    text-decoration: underline;
 }
 
 .project-card:hover {
     background: var(--white);
     transform: translateY(-5px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-}
-
-.project-image {
-    height: 200px;
-    overflow: hidden;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.1);
 }
 
 .project-content {
@@ -495,9 +524,10 @@ a:hover {
 }
 
 .contact {
-    background: linear-gradient(135deg, var(--gradient-start), var(--white));
+    background: linear-gradient(rgba(26, 35, 126, 0.85), rgba(46, 125, 50, 0.9)), url('images/globe.jpg') no-repeat center center/cover;
     padding: 80px 0;
     position: relative;
+    color: var(--white);
 }
 
 .contact::before {
@@ -507,7 +537,7 @@ a:hover {
     left: 0;
     right: 0;
     height: 100px;
-    background: linear-gradient(to bottom right, var(--gradient-end), transparent);
+    background: linear-gradient(to bottom, rgba(26, 35, 126, 0.9), transparent);
     pointer-events: none;
 }
 
@@ -522,6 +552,13 @@ a:hover {
 .contact-info h3 {
     font-size: 2em;
     margin-bottom: 20px;
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info p {
+    color: var(--white);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .contact-details {
@@ -533,29 +570,57 @@ a:hover {
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
+    color: var(--white);
 }
 
 .contact-item i {
     font-size: 1.5em;
-    color: var(--primary-color);
+    color: var(--primary-light);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item span {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .contact-form input,
 .contact-form textarea {
     padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
     font-family: var(--font-primary);
     font-size: 1em;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: var(--white);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-light);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    outline: none;
 }
 
 .contact-form textarea {
@@ -563,12 +628,9 @@ a:hover {
     resize: vertical;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    background: var(--white);
-    border-color: var(--primary-light);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    outline: none;
+.section-heading h2 {
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .footer {
@@ -691,6 +753,7 @@ a:hover {
     background: transparent;
     color: var(--white);
     border: 2px solid var(--white);
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 
